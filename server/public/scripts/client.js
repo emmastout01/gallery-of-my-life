@@ -1,0 +1,1 @@
+var myGalleryApp = angular.module('myGalleryApp', []);
