@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,17 @@
     <link rel="stylesheet" href="styles/style.css">
     <title>Weekend Challenge 4</title>
 </head>
+
 <body ng-app='myGalleryApp'>
-    <h1>The Gallery of My Life</h1>
-    <p>Is angular working?</p> {{1===1}}
+    <div ng-controller="GalleryController as gallery">
+        <h1>The Gallery of My Life</h1>
+        <p>Is angular working?</p> {{1===1}}
+        <p>Is the controller working?</p> {{gallery.test}}
+        <br>
+        <br>
+        <img ng-click="gallery.imageClick()" ng-src="images/pride.jpg" alt="photo at pride festival" height="300">
+        <img ng-click="gallery.imageClick()" ng-src="images/heather_and_emma.jpg" alt="heather and emma in the snow" height="300">
+    </div>
 </body>
+
 </html>
