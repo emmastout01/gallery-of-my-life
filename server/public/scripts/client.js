@@ -21,13 +21,15 @@ myGalleryApp.controller('GalleryController', function(){
 
     gallery.images = [image1, image2]
     
-    
+    gallery.showImage = function(image) {
+        
+    }
    
 
     gallery.imageClick = function(image) {
         console.log('in image click');
-        image.showImage =! image.showImage;
         image.showDescription =! image.showDescription;
+        image.showImage =! image.showImage;
     }
 
 

@@ -19,7 +19,10 @@
         <br>
         <br>
         <div ng-repeat="image in gallery.images">
-            <img ng-click="gallery.imageClick()" ng-src="{{image.path}}" height="300">
+            <img ng-show="image.showImage" ng-click="gallery.imageClick(image)" ng-src="{{image.path}}" height="300">
+            <div ng-show="image.showDescription"ng-click="gallery.imageClick(image)" height="300">
+                {{image.description}}
+            </div>
         </div>
     </div>
 </body>
