@@ -18,9 +18,9 @@
         <p>Is the controller working?</p> {{gallery.test}}
         <br>
         <br>
-        <img ng-click="gallery.imageClick()" ng-src="images/pride.jpg" alt="photo at pride festival" height="300">
-        <img ng-click="gallery.imageClick()" ng-src="images/heather_and_emma.jpg" alt="heather and emma in the snow" height="300">
+        <div ng-repeat="image in gallery.images">
+            <img ng-click="gallery.imageClick()" ng-src="{{image.path}}" height="300">
+        </div>
     </div>
 </body>
-
 </html>

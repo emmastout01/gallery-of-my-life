@@ -5,11 +5,12 @@
 - [x] Spin up server
 - [x] Create gallery controller
 - [x] Add images to page
-- [ ] Create array of image objects
+- [x] Create array of image objects
+- [x] Create repeat-ng directive to loop through images array
 - [ ]
 - [ ]
 - [ ]
 - [ ]
 - [ ]
 - [ ]
-- [ ]
+
