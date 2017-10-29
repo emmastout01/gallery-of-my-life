@@ -6,26 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="vendors/angular.js"></script>
+    <script src="scripts/image-data.js"></script>
     <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="vendors/css/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Weekend Challenge 4</title>
 </head>
 
 <body ng-app='myGalleryApp'>
-    <div ng-controller="GalleryController as gallery">
+    <div ng-controller="GalleryController as gallery" class="container-fluid">
         <h1>The Gallery of My Life</h1>
         <p>Is angular working?</p> {{1===1}}
         <p>Is the controller working?</p> {{gallery.test}}
         <br>
         <br>
-        <div ng-repeat="image in gallery.images">
-            <img ng-show="image.showImage" ng-click="gallery.imageClick(image)" ng-src="{{image.path}}" height="300">
-            <div ng-show="image.showDescription"ng-click="gallery.imageClick(image)" height="300">
-                {{image.description}}
-            </div>
-            <button ng-click="gallery.likeBtnClick(image)">Like This Photo!</button>
+        <div class="row">
+        <div ng-repeat="image in gallery.images track by $index" 
+        class="col-md-4 col-sm-6 col-xs-12">
+            <div class="crop" 
+            ng-mouseenter="imageStyle={'border-radius': '100%'}"
+            ng-mouseleave="imageStyle={'border-radius': '20px'}"
+            ng-style="imageStyle">
+                <img ng-show="image.showImage" 
+                ng-click="gallery.imageClick(image)" ng-src="{{image.path}}" height="300">
+                <div class="description" ng-show="image.showDescription" 
+                ng-mouseenter="imageStyle={'border-radius': '100%'}"
+                ng-mouseleave="imageStyle={'border-radius': '20px'}"
+                ng-click="gallery.imageClick(image)" height="300">
+                    <div class="description-text">
+                        {{image.description}}
+                    </div>
+                </div>
+            </div> <!-- end crop div -->
+            <button ng-click="gallery.likeBtnClick(image)">
+                <span class="glyphicon glyphicon-heart">
+            </button>
             {{image.likes}} Views of image: {{image.viewsToShow}}
-        </div>
-    </div>
+        </div> <!-- end column -->
+    </div> <!-- end row -->
+    </div> <!-- end gallery controller -->
 </body>
 </html>

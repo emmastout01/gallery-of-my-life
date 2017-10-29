@@ -1,0 +1,24 @@
+.crop {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+   }
+
+.crop img {
+    height: 300px;
+    width: auto;
+   }
+
+.crop .description {
+    background-color: blue;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    
+   }
+
+.description-text {
+    font-family: 'Georgia';
+    text-align: center;
+}
