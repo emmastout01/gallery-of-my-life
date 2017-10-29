@@ -7,8 +7,8 @@
 - [x] Add images to page
 - [x] Create array of image objects
 - [x] Create repeat-ng directive to loop through images array
-- [ ]
-- [ ]
+- [x] Add likes property to image object, get like button working
+- [x] Add views property to image object, get views display working
 - [ ]
 - [ ]
 - [ ]

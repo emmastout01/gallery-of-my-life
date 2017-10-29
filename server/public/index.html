@@ -23,6 +23,8 @@
             <div ng-show="image.showDescription"ng-click="gallery.imageClick(image)" height="300">
                 {{image.description}}
             </div>
+            <button ng-click="gallery.likeBtnClick(image)">Like This Photo!</button>
+            {{image.likes}} Views of image: {{image.viewsToShow}}
         </div>
     </div>
 </body>

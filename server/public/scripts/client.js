@@ -9,36 +9,34 @@ myGalleryApp.controller('GalleryController', function(){
         path: 'images/heather_and_emma.jpg', 
         description: 'this is the image description.',
         showImage: true,
-        showDescription: false
+        showDescription: false,
+        likes: 0, 
+        views: 0,
+        viewsToShow: 0
     }
 
     var image2 = {
         path: 'images/pride.jpg',
         description: 'another description!',
         showImage: true,
-        showDescription: false
+        showDescription: false,
+        likes: 0,
+        views: 0,
+        viewsToShow: 0
     }
 
     gallery.images = [image1, image2]
-    
-    gallery.showImage = function(image) {
-        
-    }
-   
 
     gallery.imageClick = function(image) {
-        console.log('in image click');
         image.showDescription =! image.showDescription;
         image.showImage =! image.showImage;
+        image.views ++;
+        if (image.views % 2 !== 0) {
+            image.viewsToShow ++;
+        }
     }
 
-
-
-
+    gallery.likeBtnClick = function(image) {
+        image.likes ++;
+        }
 })
-
-/*
-Then when the image is clicked on, the description is shown instead of the image. 
-To do this, in the image clicked function I need to change the display. I could hide the image (image.path), 
-and show the description 
-*/ 
