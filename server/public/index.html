@@ -10,14 +10,13 @@
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="vendors/css/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <title>Weekend Challenge 4</title>
 </head>
 
 <body ng-app='myGalleryApp'>
     <div ng-controller="GalleryController as gallery" class="container-fluid">
-        <h1>The Gallery of My Life</h1>
-        <p>Is angular working?</p> {{1===1}}
-        <p>Is the controller working?</p> {{gallery.test}}
+        <h1>A Constellation of Memories</h1>
         <br>
         <br>
         <div class="row">
@@ -41,7 +40,16 @@
             <button ng-click="gallery.likeBtnClick(image)">
                 <span class="glyphicon glyphicon-heart">
             </button>
-            {{image.likes}} Views of image: {{image.viewsToShow}}
+            <span class="likes"><ng-pluralize count="image.likes"
+            when="{'0': 'Nobody likes this. ||',
+                '1': '1 person likes this. ||',
+                'other': '{} people like this. ||'}">
+            </ng-pluralize></span>
+            <span class="views"><ng-pluralize count="image.viewsToShow"
+            when="{'0': 'Nobody has viewed this.',
+                '1': '1 person has viewed this.',
+                'other': '{} people have viewed this.'}">
+            </ng-pluralize></span>
         </div> <!-- end column -->
     </div> <!-- end row -->
     </div> <!-- end gallery controller -->

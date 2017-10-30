@@ -1,8 +1,24 @@
+body {
+    background-image: url("star-background.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+h1 {
+    text-align: center; 
+    margin: 10px;
+}
+
 .crop {
     height: 300px;
     width: 300px;
     overflow: hidden;
     border-radius: 20px;
+    border: 2px solid rgb(43, 0, 128)
    }
 
 .crop img {
@@ -11,14 +27,24 @@
    }
 
 .crop .description {
-    background-color: blue;
     min-height: 300px;
     display: flex;
     align-items: center;
+    background-image: url("description-background.jpg");
     
    }
 
 .description-text {
-    font-family: 'Georgia';
     text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.glyphicon {
+    color: rgb(74, 16, 189)
+}
+
+button {
+    margin: 10px 2px;
 }

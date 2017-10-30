@@ -16,3 +16,7 @@
 - [ ]
 - [ ]
 
+// Still to do:
+- change background of description
+- add real photos and write descriptions
+
