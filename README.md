@@ -1,22 +1,23 @@
-## Weekend Challenge 4
+## Weekend Challenge 4: The Gallery of My Life
 
-### Tasks 
-- [x] Create basic html, source in angular and js, and get angular working
-- [x] Spin up server
-- [x] Create gallery controller
-- [x] Add images to page
-- [x] Create array of image objects
-- [x] Create repeat-ng directive to loop through images array
-- [x] Add likes property to image object, get like button working
-- [x] Add views property to image object, get views display working
+### Project Description
 
-### Hard Mode
-- [ ] Style with Bootstrap
-- [ ]
-- [ ]
-- [ ]
+The project displays photos of significance to me. When a user clicks on a photo, they will see a brief description of the photo. Users can 'like' photos. The number of photo views and likes display below the photo.
 
-// Still to do:
-- change background of description
-- add real photos and write descriptions
+### Technologies Used
 
+- Angular JS
+- Express
+- Node.js
+- Bootstrap
+
+### Screenshot
+
+![App screenshot](server/public/styles/screenshot2.png)
+
+### Completed Features
+- [x] Photos are displayed when page loads
+- [x] Users can click on a photo and view a description of the picture
+- [x] Users can 'like' photos
+- [x] Number of 'likes' is displayed
+- [x] Number of photo views is displayed
